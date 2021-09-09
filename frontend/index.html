@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raspi Watcher</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="titleBar">
+        <div class="left">
+            <div class="iconLogo">
+                <img src="" alt="">
+            </div>
+            <div class="title">Raspi Watcher</div>
+        </div>
+        <div class="right">
+            <div class="Tbtns" id="min-win" title="Minimize">
+                <img src="./img/minimize.svg" alt="">
+            </div>
+            <div class="Tbtns" id="max-win" title="Maximize">
+                <img src="./img/maximize.svg" id="maxiM" alt="" class="active">
+                <img src="./img/restore.svg" alt="" id="resWin" style="display: none;" class="">
+            </div>
+            <div class="Tbtns cross" id="close-win" title="Close">
+                <img src="./img/cross.svg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="btncontainers">
+            <div class="watch-div">
+                <button id="watchbtn">Watch Live</button>
+            </div> 
+            <div class="record-div">
+                <button id="recordbtn">Record</button>
+            </div>
+        </div>
+        <div class="enteraddr">
+            <div id="inpcont">
+                <input id="ipaddr" type="text" minlength="7" maxlength="15" size="15" placeholder="0.0.0.0">
+                <div class="colonsep"><div class="">:</div></div>
+                <input id="port" type="number" min="0">
+            </div>
+            <div class="recmodemenu">
+                <label for="mode-select">Select Record Mode</label>
+                <select name="mode" id="mode-select" onchange="selectoptions(this)">
+                    <option value="alwayson">Always On</option>
+                    <option value="saveafterinterval">Save File</option>
+                </select>
+                <div class="inphours hide">
+                    <div>every</div>
+                    <input type="number" value="6" onchange="hourchanged(this)" min="1">
+                    <div>hours</div>
+                </div>
+            </div>
+            <div class="select-destination">
+                <div>
+                    <button id="selectdesbtn">Select Folder</button>
+                </div>
+                <div id="selecteddest"></div>
+            </div>
+        </div>
+        <div id="logDiv">
+            <div id="logs">
+                <p>Listening for changes ...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./linkers/script.js"></script>
+    <script src="./linkers/titleBar.js"></script>
+</body>
+</html>

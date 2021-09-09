@@ -1,0 +1,28 @@
+{
+  "name": "raspi-watcher",
+  "version": "0.1.0",
+  "description": "An electron app, acting as an wrapper for executing RTSP stream video data from Raspiberry Pi camera.",
+  "main": "main.js",
+  "scripts": {
+    "start":"electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sudolmin/Raspi-Watcher.git"
+  },
+  "keywords": [
+    "ElectronJs",
+    "Raspberry",
+    "Pi",
+    "Camera",
+    "RTSP",
+    "server",
+    "v4l2"
+  ],
+  "author": "sudolmin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sudolmin/Raspi-Watcher/issues"
+  },
+  "homepage": "https://github.com/sudolmin/Raspi-Watcher#readme"
+}
